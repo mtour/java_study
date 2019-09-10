@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: rabbitmqdemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: cwliu
+Implementation-Vendor-Id: com.lcw
+Build-Jdk: 1.8.0_45
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+
