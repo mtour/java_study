@@ -7,3 +7,5 @@ mvnw.cmd
 .mvn
 *.lst
 *.original
+hdfstest/raw
+hdfstest/target

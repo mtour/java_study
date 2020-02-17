@@ -1,4 +1,4 @@
-package com.david.bigdata;
+package com.david.bigdata.wc;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
