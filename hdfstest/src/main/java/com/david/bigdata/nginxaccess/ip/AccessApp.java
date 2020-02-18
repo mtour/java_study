@@ -1,15 +1,15 @@
-package com.david.bigdata.nginxaccess;
+package com.david.bigdata.nginxaccess.ip;
 
-import com.david.bigdata.wc.WordCountApp;
-import com.david.bigdata.wc.WordCountMapper;
-import com.david.bigdata.wc.WordCountReducer;
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
+import java.net.URI;
 
 public class AccessApp {
     public static void main(String[] args) throws  Exception {
@@ -27,12 +27,12 @@ public class AccessApp {
         job.setOutputValueClass(IntWritable.class);
 
         Path inputPath = new Path("raw/nginxaccess/input");
-        Path outPutPath = new Path("raw/nginxaccess/wordcount/output");
+        Path outPutPath = new Path("raw/nginxaccess/output/ip");
 
-        /*FileSystem fs = FileSystem.get(new URI("hdfs://192.168.56.101:9000"),configuration);
+        FileSystem fs = FileSystem.get(configuration);
         if (fs.exists(outPutPath)){
             fs.delete(outPutPath,true);
-        }*/
+        }
 
         FileInputFormat.setInputPaths(job,inputPath);
         FileOutputFormat.setOutputPath(job,outPutPath);

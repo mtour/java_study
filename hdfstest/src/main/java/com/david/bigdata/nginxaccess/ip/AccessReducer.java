@@ -1,4 +1,4 @@
-package com.david.bigdata.nginxaccess;
+package com.david.bigdata.nginxaccess.ip;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
